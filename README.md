@@ -41,7 +41,7 @@ A domain service is used:
 It contains the ports, which are interfaces that allow inbound or outbound flow. It also contains services that implement the business use cases.
 
 For this exercise, the following use case (inbound port) is declared:
-- `RobotsMoveUseCase`: It receives the input as plain text, then it parses the text to extract each robot configuration and their moves.  Then, it call the domain layer to process robot by robot sequentially.
+- `RobotsMoveUseCase`: It receives the input as plain text, then it parses the text to extract each robot configuration and their moves.  Then, it calls an implementation of `RobotDomainService` in the domain layer to process robot by robot sequentially.
 
 It also contains a factory `FloorFactory` to build floors.
 
@@ -49,7 +49,7 @@ It also contains a factory `FloorFactory` to build floors.
 
 Contains an adapter that loads the input data as text.
 
-For this exercise, the adapter reads a file from the classpath and then passes it to the application service layer. It then prints the result in the Console logger.
+For this exercise, the adapter reads a file from the classpath and then passes it to an implementation of `RobotsMoveUseCase` in the application service layer. It then prints the result in the Console logger.
 
 ### Bootstrap
 

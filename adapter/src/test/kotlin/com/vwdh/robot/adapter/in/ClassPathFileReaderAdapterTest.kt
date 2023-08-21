@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 
 @ExtendWith(MockKExtension::class)
-class ClassPathFileReaderAdapterIntegrationTest(
+class ClassPathFileReaderAdapterTest(
     @MockK
     private val robotsMoveUseCaseMock: RobotsMoveUseCase,
     @MockK

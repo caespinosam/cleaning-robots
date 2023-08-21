@@ -1,6 +1,6 @@
 package com.vwdh.robot.adapter.`in`.utility
 
-import com.vwdh.robot.domain.applicationservice.dto.RobotMoveResponse
+import com.vwdh.robot.application.service.port.`in`.dto.RobotMoveResponse
 
 fun convertResponseIntoPlainString(list: List<RobotMoveResponse>): String {
     val sb = StringBuilder()

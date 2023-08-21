@@ -1,6 +1,7 @@
 package com.vwdh.robot.adapter.`in`
 
-import com.vwdh.robot.domain.applicationservice.port.`in`.RobotsMoveUseCase
+import com.vwdh.robot.adapter.`in`.responseprocessor.RobotsResponseProcessor
+import com.vwdh.robot.application.service.port.`in`.RobotsMoveUseCase
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
 import org.springframework.core.io.ClassPathResource

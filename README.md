@@ -60,7 +60,7 @@ The main entities are:
 A domain service is used:
 - `RobotDomainService`: Contains the main logic to know when exactly a robot should rotate to left or right, or move forward. It handles only one robot at a time.
 
-It is a Maven submodule.
+It is a Maven submodule that does not depend on other project's modules.
 
 #### - Service
 It contains the inbound port in form of interface and a default implementation. It also contains an application service that implement the business use cases by receiving a command from adapters and then calling the domain service in the `model` submodule.
@@ -70,20 +70,20 @@ For this exercise, the following use case (inbound port) is declared:
 
 It also contains a factory `FloorFactory` to build floors.
 
-It is a Maven submodule.
+It is a Maven submodule that depends on the `model` submodule.
 ### Adapter
 
 Contains an adapter `ClassPathFileReaderAdapter` that loads the input data as text automatically once the application is started. 
 
 For this exercise, the adapter reads a file from the classpath and then passes it to an implementation of `RobotsMoveUseCase` in the `service` submodule. It then prints the result in the Console logger.
 
-It is a Maven module.
+It is a Maven module that depend on the `service` submodule.
 ### Bootstrap
 
 Instantiates adapters and domain and application services, and starts the CLI-based application by running automatically `ClassPathFileReaderAdapter`.
 It leverages Spring Boot framework to inject all services implementations.
 
-It is a Maven module.
+It is a Maven module that depends on the `service` and `adapter` submodules.
 ## Test strategy
 
 An integration test was added:

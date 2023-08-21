@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class RobotSpringBootApplication
 
 fun main(args: Array<String>) {
-    runApplication<com.vwdh.robot.RobotSpringBootApplication>(*args)
+    runApplication<RobotSpringBootApplication>(*args)
 }
